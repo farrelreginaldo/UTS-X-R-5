@@ -38,11 +38,11 @@ public class UTSPraktikXR5 {
         System.out.println("6. Harga Buku Tulis : "+ "Rp"+hargaBukutulis+",00");
         
         System.out.println("\nDaftar Beli");
+        System.out.println("Ketik harga barang yang anda beli.");
         System.out.println("Maksimal pembelian 10 barang, jika membeli lebi dari 10 bisa melakukan transaksi lagi, Terima kasih.");
-        System.out.println("Jika kurang dari 10 maka ketik 0 di setiap nomor.");
-        
-
-        
+        System.out.println("Mohon kejujurannya.");
+       
+       
         System.out.print("1. ");
         int barang1 = daftarBeli.nextInt();
         
@@ -73,18 +73,21 @@ public class UTSPraktikXR5 {
         System.out.print("10. ");
         int barang10 = daftarBeli.nextInt();
         
-        int towal =barang1 + barang2+barang3+barang4+barang5+barang6+barang7+barang8+barang9+barang10;
+        int towal = barang1 + barang2 + barang3 + barang4 + barang5 + barang6 + barang7 + barang8 + barang9 + barang10;
        
         if (towal > 500000) {
-        int tokir = 50 / 100 * towal;
+        int tokir = towal*(50/100);
+            System.out.println("Selamat, anda mendapat diskon 50%");
         System.out.println("Harga total = Rp"+ tokir+",00");
         } 
         else if(towal > 300000) {
-        int tokir = 80 / 100 * towal;
+        int tokir = towal*(80/100);
+            System.out.println("Selamat, anda mendapatkan diskon 20%");
         System.out.println("Harga total = Rp"+ tokir+",00");
         } 
         else if(towal >100000) {
-        int tokir = 90 / 100 * towal;
+        int tokir = towal*(90/100);
+            System.out.println("Selamat, anda mendapatkan diskon 10%");
         System.out.println("Harga total = Rp"+ tokir+",00");
         }  
         else {
